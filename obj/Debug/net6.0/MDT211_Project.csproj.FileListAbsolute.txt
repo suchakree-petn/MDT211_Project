@@ -1,0 +1,15 @@
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\bin\Debug\net6.0\MDT211_Project.exe
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\bin\Debug\net6.0\MDT211_Project.deps.json
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\bin\Debug\net6.0\MDT211_Project.runtimeconfig.json
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\bin\Debug\net6.0\MDT211_Project.dll
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\bin\Debug\net6.0\MDT211_Project.pdb
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\obj\Debug\net6.0\MDT211_Project.csproj.AssemblyReference.cache
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\obj\Debug\net6.0\MDT211_Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\obj\Debug\net6.0\MDT211_Project.AssemblyInfoInputs.cache
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\obj\Debug\net6.0\MDT211_Project.AssemblyInfo.cs
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\obj\Debug\net6.0\MDT211_Project.csproj.CoreCompileInputs.cache
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\obj\Debug\net6.0\MDT211_Project.dll
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\obj\Debug\net6.0\refint\MDT211_Project.dll
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\obj\Debug\net6.0\MDT211_Project.pdb
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\obj\Debug\net6.0\MDT211_Project.genruntimeconfig.cache
+C:\Work_Kmutt\Y2_1\MDT211\Project\MDT211_Project\obj\Debug\net6.0\ref\MDT211_Project.dll
