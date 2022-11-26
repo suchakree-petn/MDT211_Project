@@ -38,7 +38,7 @@ class Login
             if(CheckUsername(username,signup)){
                 Console.Write("Password: ");
                 password = Console.ReadLine();
-                if(CheckPassword(password)){
+                if(CheckPassword(password,signup)){
                     check = false;
                 }else{
                     Console.WriteLine("Password isn't correct. Please try again.");
