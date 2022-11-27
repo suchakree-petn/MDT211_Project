@@ -31,14 +31,19 @@ class Login
         string password;
         bool check = true;
         while(check){
-            Console.WriteLine("Login");
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("--------------Login--------------");
             Console.Write("Username: ");
             username = Console.ReadLine();
             if(CheckUsername(username,signup)){
                 Console.Write("Password: ");
                 password = Console.ReadLine();
                 if(CheckPassword(password,signup)){
+                    Console.Clear();
+                    Console.WriteLine("----------Login Success!---------");
+                    Console.WriteLine("Please enter someting to continue");
+                    Console.ReadLine();
+                    Console.Clear();
+
                     check = false;
                 }else{
                     Console.WriteLine("Password isn't correct. Please try again.");
