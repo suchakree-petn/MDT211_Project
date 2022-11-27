@@ -26,7 +26,7 @@ class Login
         return false;
     }
     
-    public void RunLogin(SignUp signup){
+    public void RunLogin(SignUp signupUserdata){
         string username;
         string password;
         bool check = true;
@@ -34,10 +34,10 @@ class Login
             Console.WriteLine("--------------Login--------------");
             Console.Write("Username: ");
             username = Console.ReadLine();
-            if(CheckUsername(username,signup)){
+            if(CheckUsername(username,signupUserdata)){
                 Console.Write("Password: ");
                 password = Console.ReadLine();
-                if(CheckPassword(password,signup)){
+                if(CheckPassword(password,signupUserdata)){
                     Console.Clear();
                     Console.WriteLine("----------Login Success!---------");
                     Console.WriteLine("Please enter someting to continue");

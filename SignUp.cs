@@ -2,13 +2,11 @@ class SignUp{
     UserData userData = new UserData();
     public string SignUpUsername(){
         Console.Write("Username: ");
-        string username = Console.ReadLine();
-        return username;
+        return Console.ReadLine();
     }
     public  string SignUpPassword(){
         Console.Write("Password: ");
-        string password = Console.ReadLine();
-        return password;
+        return Console.ReadLine();
     }
     public void RunSignUp(){
         Console.WriteLine("-------------Sign Up-------------");
