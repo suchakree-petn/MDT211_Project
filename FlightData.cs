@@ -112,8 +112,7 @@ public class FlightData
     }
     public double GetPrice()
     {
-        this.Price *= Math.Abs(this.flightDestination - this.flightOrigin);
-        return this.Price;
+        return this.Price * Math.Abs(this.flightDestination - this.flightOrigin);
     }
     public char[,] GetSeat()
     {
