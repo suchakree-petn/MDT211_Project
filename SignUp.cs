@@ -1,18 +1,22 @@
-class SignUp{
+class SignUp
+{
     UserData userData = new UserData();
-    public string SignUpUsername(){
+
+    public string SignUpUsername()
+    {
         Console.Write("Username: ");
         return Console.ReadLine();
     }
-    public  string SignUpPassword(){
+    public string SignUpPassword()
+    {
         Console.Write("Password: ");
         return Console.ReadLine();
     }
-    public void RunSignUp(){
+
+    public void RunSignUp()
+    {
         Console.WriteLine("-------------Sign Up-------------");
-        string signUpUsername = SignUpUsername();
-        string signUpPassword = SignUpPassword();
-        User user = new User(signUpUsername, signUpPassword);
+        User user = new User(SignUpPassword(), SignUpUsername());
         userData.AddNewUser(user);
         Console.Clear();
         Console.WriteLine("---------Sign Up Success!--------");
@@ -20,7 +24,9 @@ class SignUp{
         Console.ReadLine();
         Console.Clear();
     }
-    public UserData GetUserData(){
+
+    public UserData GetUserData()
+    {
         return this.userData;
     }
 }
