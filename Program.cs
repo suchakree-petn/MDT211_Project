@@ -1,7 +1,5 @@
-﻿using System;
-public class Program
+﻿public class Program
 {
-
     private static Login login = new Login();
     private static SignUp signup = new SignUp();
     private static Reserve reserve = new Reserve();
@@ -13,13 +11,12 @@ public class Program
         {
             ChooseLoginOrSignUp();
             ShowReserveUI();
-            Program.reserve.GetFlightData().ShowSeat();
         }
     }
     public static void ChooseLoginOrSignUp()
     {
         Console.Clear();
-        Console.WriteLine("   *==Wellcome==*");
+        Console.WriteLine("   *==Welcome==*");
         Console.WriteLine("");
         Console.WriteLine("   Please Select");
         Console.WriteLine("-+-------------------");
@@ -34,12 +31,10 @@ public class Program
         int Type = int.Parse(Console.ReadLine());
         if (Type == 1)
         {
-            // Test
             login.RunLogin(signup);
         }
         else if (Type == 2)
         {
-            // Test//
             signup.RunSignUp();
             BackToMenu();
         }
@@ -55,7 +50,6 @@ public class Program
     }
     public static void ShowReserveUI()
     {
-
         Console.Clear();
         Console.WriteLine(" Select One-way trip or Round ");
         Console.WriteLine("--------------------------------");
@@ -66,17 +60,14 @@ public class Program
         Console.WriteLine("Avaiable Origin");
         Console.WriteLine("------------------");
         flightData.ShowOrigin();
-         Console.Write("Input: ");
-        
+        Console.Write("Input: ");
         Program.reserve.SelectOrigin(int.Parse(Console.ReadLine()));
-       
         Console.WriteLine("");
         Console.WriteLine("Select Destination");
         Console.WriteLine("------------------");
         flightData.ShowDestination();
-         Console.Write("Input: ");
+        Console.Write("Input: ");
         Program.reserve.SelectDestination(int.Parse(Console.ReadLine()));
-        
         Console.WriteLine("");
         Console.WriteLine("Select Depart Date");
         Console.WriteLine("------------------");
@@ -128,7 +119,7 @@ public class Program
         Console.WriteLine("    Payment List ");
         Console.WriteLine("--------------------");
         payment.CalcPrice(ticketAmount, Program.reserve);
-         Console.WriteLine("");
+        Console.WriteLine("");
         Console.WriteLine("Input any key to back to menu.");
         Console.ReadLine();
     }

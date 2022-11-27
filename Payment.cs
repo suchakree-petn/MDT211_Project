@@ -10,7 +10,8 @@ public class Payment
         {
             Console.WriteLine("Return Date: {0}/{1}/{2}", reserveInfo.GetReturnDate()[0], reserveInfo.GetReturnDate()[1], reserveInfo.GetReturnDate()[2]);
         }
-        double price = reserveInfo.GetPrice() * ticketAmount;
+        Console.WriteLine("Price per seat: " + reserveInfo.GetPrice() * reserve.GetTripMultiplier());
+        double price = reserveInfo.GetPrice() * reserve.GetTripMultiplier() * ticketAmount;
         Console.WriteLine("Result: " + price + " Bath");
     }
 }
