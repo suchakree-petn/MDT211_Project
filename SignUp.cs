@@ -16,7 +16,7 @@ class SignUp
     public void RunSignUp()
     {
         Console.WriteLine("-------------Sign Up-------------");
-        User user = new User(SignUpPassword(), SignUpUsername());
+        User user = new User(SignUpUsername(), SignUpPassword());
         userData.AddNewUser(user);
         Console.Clear();
         Console.WriteLine("---------Sign Up Success!--------");
