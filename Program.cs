@@ -8,7 +8,7 @@ public class Program
      static Payment payment = new Payment();
     public static void Main(string[] args)
     { 
-
+    
       ChooseLoginOrSignUp();
     }
     public static void ChooseLoginOrSignUp()
@@ -36,7 +36,7 @@ public class Program
         }
         else if (Type == 2)
         {
-          // Test//
+          // Test
            ShowSignUpUI();
         }
         else
@@ -72,14 +72,17 @@ static void BackToMenu()
         Console.WriteLine(" Password: ");
         Console.WriteLine("--------------------");
         login.RunLogin(signup);
+        
     }
     public static void ShowReserveUI()
     {
  
     Console.Clear();
-    Console.WriteLine(" Payment List ");
+    Console.WriteLine(" ShowReserve List ");
     Console.WriteLine("--------------------");
     reserve.GetTripMultiplier();
+    Console.ReadLine();
+    ShowPaymentUI();
     }
      public static void ShowPaymentUI()
     {
@@ -88,8 +91,8 @@ static void BackToMenu()
         Console.WriteLine(" Payment List ");
         Console.WriteLine("--------------------");
         payment.CalcPrice();
-        Console.ReadLine();
         Console.WriteLine("Input any key to back to menu.");
+        Console.ReadLine();
         BackToMenu();
        
     }

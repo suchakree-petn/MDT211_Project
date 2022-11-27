@@ -1,0 +1,5 @@
+C:\Users\thanas11065\Desktop\ProjectFinal\G\X\New folder\MDT211_Project\obj\Debug\net6.0\MDT211_Project.csproj.AssemblyReference.cache
+C:\Users\thanas11065\Desktop\ProjectFinal\G\X\New folder\MDT211_Project\obj\Debug\net6.0\MDT211_Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thanas11065\Desktop\ProjectFinal\G\X\New folder\MDT211_Project\obj\Debug\net6.0\MDT211_Project.AssemblyInfoInputs.cache
+C:\Users\thanas11065\Desktop\ProjectFinal\G\X\New folder\MDT211_Project\obj\Debug\net6.0\MDT211_Project.AssemblyInfo.cs
+C:\Users\thanas11065\Desktop\ProjectFinal\G\X\New folder\MDT211_Project\obj\Debug\net6.0\MDT211_Project.csproj.CoreCompileInputs.cache
