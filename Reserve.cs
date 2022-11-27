@@ -1,6 +1,6 @@
 public class Reserve
 {
-    FlightData flightData = new FlightData();
+    private FlightData flightData = new FlightData();
     private int inputOptionTrip;
 
     private string flightDestination = " ";
@@ -33,4 +33,7 @@ public class Reserve
     public int GetTripMultiplier(){
         return this.inputOptionTrip;
     }
+    public FlightData GetFlightData(){
+        return this.flightData;
+    } 
 }

@@ -9,45 +9,43 @@ public class FlightData
     private double Price = 200;
     private char[,] Seat = new char[16, 4];
 
-    public void ShowOrigin(string input)
+    public void ShowOrigin()
     {
-        for (int i = 0; i < Origin.Length; i++)
+        for (int i = 0; i < this.Origin.Length; i++)
         {
-            Console.WriteLine(i + 1 + ") " + Origin[i]);
+            Console.WriteLine(i + 1 + ") " + this.Origin[i]);
         }
     }
     public string GetOrigin(int input)
     {
-        return this.Origin[input];
+        return this.Origin[input - 1];
+    }
+    public int GetFlightOrigin()
+    {
+        return this.flightOrigin;
     }
     public void SetOrigin(int input)
     {
         this.flightOrigin = input;
     }
-
-
-
-    public void ShowDestination(string input)
+    public void ShowDestination()
     {
-        for (int i = 0; i < Destination.Length; i++)
+        for (int i = 0; i < this.Destination.Length; i++)
         {
-            Console.WriteLine(i + 1 + ") " + Destination[i]);
+            Console.WriteLine(i + 1 + ") " + this.Destination[i]);
         }
-        // int count = 1;
-        // for (int i = 0; i < Destination.Length; i++)
-        // {
-        //     Console.WriteLine(i + 1 + ") ");
-        //     if (input != Destination[i])
-        //     {
-        //         Console.WriteLine(count + ") " + Destination[i]);
-        //         count++;
-        //     }
-        // }
     }
-
+    public int GetFlightDestination()
+    {
+        return this.flightDestination;
+    }
+    public string GetDestination(int input)
+    {
+        return this.Destination[input - 1];
+    }
     public void SetDestination(int input)
     {
-        if (input == flightOrigin)
+        if (input == this.flightOrigin)
         {
             Console.WriteLine("Please select other destination.");
             SetDestination(int.Parse(Console.ReadLine()));
@@ -64,36 +62,61 @@ public class FlightData
     {
         this.Depart_date = input;
     }
+    public int[] GetDepartDate()
+    {
+        return this.Depart_date;
+    }
     public void SetReturnDate(int[] input)
     {
         this.Return_date = input;
     }
+    public int[] GetReturnDate()
+    {
+        return this.Return_date;
+    }
     public void SetSeat(int[] input)
     {
-        this.Seat[input[0], input[1]] = 'X';
+        while (this.Seat[input[1], input[0]] == 'X')
+        {
+            Console.WriteLine("This seat already reserved. Please try again.");
+            int[] newInput = { Console.Read() - 65, int.Parse(Console.ReadLine()) - 1 };
+            input = newInput;
+        }
+        this.Seat[input[1], input[0]] = 'X';
     }
 
     public void ShowSeat()
     {
+        Console.WriteLine("AB CD");
         for (int i = 0; i < Seat.GetLength(0); i++)
         {
             for (int j = 0; j < Seat.GetLength(1); j++)
             {
                 Console.Write(Seat[i, j]);
-                if (j == 1)
+                if ((j + 1) % 2 == 0)
                 {
-                    Console.Write("  ");
+                    Console.Write(" ");
+                }
+                if ((j + 1) % 4 == 0)
+                {
+                    Console.Write(" " + (i + 1));
+                    Console.WriteLine(" ");
                 }
             }
-            if (i % 4 == 0)
+            if ((i + 1) % 4 == 0)
             {
                 Console.WriteLine(" ");
+                Console.WriteLine("AB CD");
             }
         }
     }
     public double GetPrice()
     {
-        this.Price *= Math.Abs(this.flightDestination-this.flightOrigin);
+        this.Price *= Math.Abs(this.flightDestination - this.flightOrigin);
         return this.Price;
+    }
+    public char[,] GetSeat()
+    {
+        return this.Seat;
     }
 }
