@@ -27,13 +27,18 @@
     }
     public static void InputType()
     {
-        Console.WriteLine("Input Type: ");
-        int Type = int.Parse(Console.ReadLine());
-        if (Type == 1)
+        Console.Write("Input Type: ");
+        string Type = Console.ReadLine();
+        Console.Clear();
+        if (Type == "1")
         {
-            login.RunLogin(signup);
+            bool checkLogin = login.RunLogin(signup);
+            if (checkLogin == false)
+            {
+                BackToMenu();
+            }
         }
-        else if (Type == 2)
+        else if (Type == "2")
         {
             signup.RunSignUp();
             BackToMenu();
@@ -41,6 +46,8 @@
         else
         {
             Console.WriteLine("Try Again!!");
+            Console.ReadLine();
+            ChooseLoginOrSignUp();
         }
     }
     static void BackToMenu()
@@ -69,6 +76,7 @@
         Console.Write("Input: ");
         Program.reserve.SelectDestination(int.Parse(Console.ReadLine()));
         Console.WriteLine("");
+        Console.Clear();
         Console.WriteLine("Select Depart Date");
         Console.WriteLine("------------------");
         int[] departDate = new int[3];

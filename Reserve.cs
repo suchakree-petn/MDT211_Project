@@ -30,10 +30,12 @@ public class Reserve
     {
         this.flightData.SetReturnDate(input);
     }
-    public int GetTripMultiplier(){
+    public int GetTripMultiplier()
+    {
         return this.inputOptionTrip;
     }
-    public FlightData GetFlightData(){
+    public FlightData GetFlightData()
+    {
         return this.flightData;
-    } 
+    }
 }
