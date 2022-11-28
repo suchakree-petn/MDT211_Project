@@ -28,7 +28,7 @@ class Login
         return false;
     }
 
-    public void RunLogin(SignUp signupUserdata)
+    public bool RunLogin(SignUp signupUserdata)
     {
         string username;
         string password;
@@ -38,23 +38,35 @@ class Login
             Console.WriteLine("--------------Login--------------");
             Console.Write("Username: ");
             username = Console.ReadLine();
-            if (CheckUsername(username, signupUserdata))
+            if (username != "exit")
             {
-                Console.Write("Password: ");
-                password = Console.ReadLine();
-                if (CheckPassword(password, signupUserdata))
+                if (CheckUsername(username, signupUserdata))
                 {
-                    Console.Clear();
-                    Console.WriteLine("----------Login Success!---------");
-                    Console.WriteLine("Please enter someting to continue");
-                    Console.ReadLine();
-                    Console.Clear();
+                    Console.Write("Password: ");
+                    password = Console.ReadLine();
+                    if (CheckPassword(password, signupUserdata))
+                    {
+                        Console.Clear();
+                        Console.WriteLine("----------Login Success!---------");
+                        Console.WriteLine("Please enter someting to continue");
+                        Console.ReadLine();
+                        Console.Clear();
 
-                    check = false;
+                        check = false;
+                        return true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Password isn't correct. Please try again.");
+                        Console.WriteLine("------------------------------------------------");
+                        Console.WriteLine("Please enter someting to continue");
+                        Console.ReadLine();
+                        Console.Clear();
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Password isn't correct. Please try again.");
+                    Console.WriteLine("User isn't already registered. Please try again.");
                     Console.WriteLine("------------------------------------------------");
                     Console.WriteLine("Please enter someting to continue");
                     Console.ReadLine();
@@ -63,12 +75,11 @@ class Login
             }
             else
             {
-                Console.WriteLine("User isn't already registered. Please try again.");
-                Console.WriteLine("------------------------------------------------");
-                Console.WriteLine("Please enter someting to continue");
-                Console.ReadLine();
                 Console.Clear();
+                check = false;
+                return false;
             }
         }
+        return false;
     }
 }
