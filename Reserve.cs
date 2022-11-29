@@ -3,7 +3,6 @@ public class Reserve
     private FlightData flightData = new FlightData();
     private int inputOptionTrip;
 
-    private string flightDestination = " ";
     public void SelectRoundOrOneway()
     {
         this.inputOptionTrip = int.Parse(Console.ReadLine());
